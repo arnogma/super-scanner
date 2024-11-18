@@ -41,10 +41,11 @@ def cli_arguments():
     parser.add_argument("-i", "--input", type=str, nargs=1, metavar="path", default=['ips.txt'], help="Opens and reads specified IPs file")
     parser.add_argument("-o", "--output", type=str, nargs=1, metavar="path", default=['masscan_results.txt'], help="File/Path for program output to be saved in")
     parser.add_argument("--rate", type=int, nargs=1, metavar="number", default=[10000], help="Determine number of IPs scanned at once")
-    parser.add_argument("-p", "--port", type=str, nargs=1, metavar="port", default=['443'], help="Targeted port(s) as a comma-separated string, e.g., '443,80,8080'")
+    parser.add_argument("-p", "--ports", type=str, nargs=1, metavar="port", default=['443'], help="Targeted port(s) as a comma-separated string, e.g., '443,80,8080'")
     parser.add_argument("--all-ports", action="store_true", help="Scan all ports (overrides --port if specified)")
     
     args = parser.parse_args()
+    #if all-ports arg is used, override ports arg
     ports = '0-65535' if args.all_ports else args.port[0]
 
     return args.input[0], args.output[0], args.rate[0], ports
