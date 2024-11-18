@@ -7,6 +7,10 @@ A simple Python-based SSL checker and mass IP scanner that utilizes `masscan` to
 
 Before running the code, please use a VPN to avoid getting blacklisted
 
+## Disclaimer
+
+This tool is intended for **educational and legal purposes only**. The author does not condone or endorse the use of this software for any illegal or unethical activities. Users are solely responsible for ensuring that they comply with all applicable laws and regulations when using this tool. Use of this tool without proper authorization may violate local, state, or international laws.
+
 ## Features
 
 - Scans a list of IPs using `masscan`.
