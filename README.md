@@ -71,10 +71,16 @@ To scan a list of IPs in `ips.txt` for port 443 (HTTPS):
 python super-scanner.py -i ips.txt -o masscan_results.txt -p 443
 ```
 
-To scan a list of IPs for all ports (0-65535) and save the results to `scan_results.txt`:
+To scan a list of IPs for port 80, 443, and 8080 and save the results to `scan_results.txt`:
 
 ```bash
-python super-scanner.py -i ips.txt -o scan_results.txt -p 0-65535
+python super-scanner.py -i ips.txt -o scan_results.txt -p 80,443,8080
+```
+
+To scan a list of IPs for all portts and save the results to `scan_results.txt`:
+
+```bash
+python super-scanner.py -i ips.txt -o scan_results.txt --all-ports
 ```
 
 To scan with a custom rate (e.g., 5000 IPs at once):
