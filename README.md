@@ -3,6 +3,10 @@
 
 A simple Python-based SSL checker and mass IP scanner that utilizes `masscan` to scan a list of IP addresses for open ports, specifically targeting SSL-related ports (default is port 443). This tool is useful for network security professionals, penetration testers, or anyone needing to identify live SSL services in a subnet.
 
+## Warning
+
+Before running the code, please use a VPN to avoid getting blacklisted
+
 ## Features
 
 - Scans a list of IPs using `masscan`.
