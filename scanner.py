@@ -31,14 +31,9 @@ class SSLChecker:
                     pass
                 print(f'File "{file_path}" has been created')
 
-    #ONLY FOR TESTING
-    def tester(self):
-        print(f"sudo masscan -p{self.target_port} --rate {self.masscan_rates} --wait 0 -iL {self.ips_file} -oH {self.masscan_results_file}")
-
     def main(self):
         self.check_create_files(self.masscan_results_file, self.ips_file)
-        self.tester()
-        #self.run_masscan() #WARNING: Use a VPN before running this
+        self.run_masscan() #WARNING: Use a VPN before running this
 
 #for inputting cli arguments
 def cli_arguments():
